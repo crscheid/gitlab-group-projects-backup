@@ -16,7 +16,7 @@ The image can be run by passing an environment variable file to `docker run`.
 $ docker run --rm --name gitlab-backup --env-file ./env.list -v /your/local/directory:/data cscheide/gitlab-group-projects-backup:latest
 ```
 
-There is a sample.env file contained within the Github project for you to reference if needed.
+There is a [sample.env](https://github.com/crscheid/gitlab-group-projects-backup/blob/main/sample.env) file contained within the Github project for you to reference if needed.
 
 ## Using with environment variables
 
