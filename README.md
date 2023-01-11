@@ -13,7 +13,7 @@ For simplicity, it will save all files into a single directory, using the full p
 The image can be run by passing an environment variable file to `docker run`.
 
 ```console
-$ docker run --rm --name gitlab-backup --env-file ./env.list -v /your/local/directory:/data cscheide/gitlab-group-projects-backup:latest
+$ docker run -ti --rm --name gitlab-backup --env-file ./env.list -v /your/local/directory:/data cscheide/gitlab-group-projects-backup:latest
 ```
 
 There is a [sample.env](https://github.com/crscheid/gitlab-group-projects-backup/blob/main/sample.env) file contained within the Github project for you to reference if needed.
@@ -23,7 +23,7 @@ There is a [sample.env](https://github.com/crscheid/gitlab-group-projects-backup
 Alternatively, the environment variables can be passed in via the `-e` flag.
 
 ```console
-$ docker run --rm --name gitlab-backup -e "GITLAB_TOKEN=your_gitlab_token" -e "GITLAB_GROUP_ID=000000" -e "BACKUP_ARCHIVED=yes" -v /your/local/directory:/data cscheide/gitlab-group-projects-backup:latest
+$ docker run -ti --rm --name gitlab-backup -e "GITLAB_TOKEN=your_gitlab_token" -e "GITLAB_GROUP_ID=000000" -e "BACKUP_ARCHIVED=yes" -v /your/local/directory:/data cscheide/gitlab-group-projects-backup:latest
 ```
 
 # Configuration
